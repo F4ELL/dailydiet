@@ -1,10 +1,26 @@
+import { TouchableOpacity } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
-export const Container = styled.View`
-    width: 100%;
-    
-    align-items: center;
+export type ButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
+
+type Props = {
+    type: ButtonTypeStyleProps;
+}
+
+export const Container = styled(TouchableOpacity)<Props>`
+    flex: 1;
+
+    min-height: 136px;
+    max-height: 136px;
+
+    background-color: ${({ theme, type }) => type === 'PRIMARY' ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT };
+
+    border-radius: 8px;
+
     justify-content: center;
+    align-items: center;
+
+    margin: 32px 0;
 `;
 
 export const Title = styled.Text`

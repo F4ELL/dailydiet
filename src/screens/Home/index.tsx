@@ -1,5 +1,5 @@
 import { Header } from '@components/Header';
-import { Highlight } from '@components/Highlight';
+import { Percent } from '@components/Percent';
 import { Container } from './styles';
 
 export function Home() {
@@ -7,9 +7,10 @@ export function Home() {
     <Container>
       <Header />
 
-      <Highlight 
-        title='90,86%'
+      <Percent 
+        title= '90,86%'
         subtitle='das refeições dentro da dieta'
+        type='PRIMARY'
       />
     </Container>
   );
