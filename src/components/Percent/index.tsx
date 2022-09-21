@@ -1,11 +1,11 @@
 import { TouchableOpacityProps } from "react-native";
 
-import { ButtonTypeStyleProps, Container, Subtitle, Title } from "./styles";
+import { PercentButtonTypeStyleProps, Container, Subtitle, Title } from "./styles";
 
 type Props = TouchableOpacityProps & {
     title: string,
     subtitle: string,
-    type: ButtonTypeStyleProps,
+    type: PercentButtonTypeStyleProps,
 }
 
 export function Percent({ title, subtitle, type, ...rest }: Props) {

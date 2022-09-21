@@ -1,17 +1,17 @@
 import { TouchableOpacity } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
-export type ButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
+export type PercentButtonTypeStyleProps = 'PRIMARY' | 'SECONDARY';
 
 type Props = {
-    type: ButtonTypeStyleProps;
+    type: PercentButtonTypeStyleProps;
 }
 
 export const Container = styled(TouchableOpacity)<Props>`
     flex: 1;
 
-    min-height: 136px;
-    max-height: 136px;
+    min-height: 102px;
+    max-height: 102px;
 
     background-color: ${({ theme, type }) => type === 'PRIMARY' ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT };
 
@@ -20,7 +20,7 @@ export const Container = styled(TouchableOpacity)<Props>`
     justify-content: center;
     align-items: center;
 
-    margin: 32px 0;
+    margin: 32px 0 40px;
 `;
 
 export const Title = styled.Text`

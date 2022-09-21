@@ -1,7 +1,17 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 export const Container = styled.View`
     flex: 1;
     background-color: ${({ theme }) => theme.COLORS.GRAY_700};
     padding: 24px;
+`;
+
+export const Meals = styled.Text`
+    ${({ theme }) => css`
+        font-size: ${theme.FONT_SIZE.LG}px;
+        font-family: ${theme.FONT_FAMILY.REGULAR};
+        color: ${theme.COLORS.GRAY_100};
+    `};
+
+    margin-bottom: 8px;
 `;
